@@ -6,6 +6,5 @@ class Car < ActiveRecord::Base
 	has_one :subasta
 	validates :propietario, presence: true
 	validates :año, presence: true, length: { is: 4 }
-	validates :descripcion, optional: true
 	validates :marca, :modelo, :combustible, :km,  presence: {message: "El campo no puede quedar vacío"}
 end
