@@ -1,0 +1,41 @@
+<%= form_for(@subastum) do |f| %>
+  <% if @subastum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subastum.errors.count, "error") %> prohibited this subastum from being saved:</h2>
+
+      <ul>
+      <% @subastum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_coche %><br>
+    <%= f.number_field :id_coche %>
+  </div>
+  <div class="field">
+    <%= f.label :comprador %><br>
+    <%= f.number_field :comprador %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_publicacion %><br>
+    <%= f.datetime_select :fecha_publicacion %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_limite %><br>
+    <%= f.datetime_select :fecha_limite %>
+  </div>
+  <div class="field">
+    <%= f.label :compra_ya %><br>
+    <%= f.number_field :compra_ya %>
+  </div>
+  <div class="field">
+    <%= f.label :puja_actual %><br>
+    <%= f.number_field :puja_actual %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

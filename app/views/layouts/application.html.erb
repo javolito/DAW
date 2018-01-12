@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DAW</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'footer', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'font-awesome.min', media: 'all'%>
+  <%= csrf_meta_tags %>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<header>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                	<%= image_tag("logocremita.png", alt: "LOGO", width: '150')%>
+                </div>
+                <ul class="nav navbar-nav menu">
+                    <li class="active item"><a href="index.html">Inicio</a></li>
+                    <li class="item"><a href="faqs.html">FAQs</a></li>
+                    <li class="item"><a href="#">Contacto</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right partderecha">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span>
+                        <button class="botderecha" style="border:transparent"
+                                onclick="document.getElementById('modalRegistro').style.display='block'">Regístrate
+                        </button>
+                    </a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
+                        <button class="botderecha" style="border:transparent"
+                                onclick="document.getElementById('modalInicioSesion').style.display='block'"> Inicia
+                            sesión
+                        </button>
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<%= yield %>
+<footer>
+	    <div class="row">
+	        <div class="col-md-4 col-sm-6 footer-navigation">
+	            <%= image_tag("logocremita.png", alt: "LOGO", width: '150', :class=>"logofooter")%>
+	            <p class="links text-center"><a href="index.html">Inicio</a>
+	                <strong> · </strong><a href="faqs.html">FAQs</a>
+	                <strong> · </strong><a href="#">Contacto</a>
+	                <strong> · </strong><a onclick="document.getElementById('modalInicioSesion').style.display='block'">Iniciar Sesión</a></p>
+	            <p class="company-name text-center">busCar Canarias © 2017 </p>
+	        </div>
+	        <div class="col-md-4 footer-contacts contactos" >
+	            <div class="text-justify"><span class="fa fa-map-marker footer-contacts-icon"> </span>
+	                <p><span class="new-line-span">21, Av. José Mesa y López</span> Las Palmas de Gran Canaria, España</p>
+	            </div>
+	            <div class="text-justify"><i class="fa fa-phone footer-contacts-icon"></i>
+	                <p class="footer-center-info text-left"> +34 928 70 97 59</p>
+	            </div>
+	            <div class="text-justify"><i class="fa fa-envelope footer-contacts-icon"></i>
+	                <p><a href="#" target="_blank"></a>buscarcanarias@gmail.com</p>
+	            </div>
+	        </div>
+	        <div class="clearfix visible-sm-block"></div>
+	        <div class="col-md-3 footer-about">
+	            <div class="social-links social-icons">
+	                <div class="row">
+	                    <div class="col-md-2 col-md-offset-5">
+	                        <a href="#"><i class="fa fa-facebook"></i></a>
+	                    </div>
+	                    <div class="col-md-2">
+	                        <a href="#"><i class="fa fa-twitter"></i></a>
+	                    </div>
+	                </div>
+	                <div class="row">
+	                    <div class="col-md-2 col-md-offset-5">
+	                        <a href="#"><i class="fa fa-linkedin"></i></a>
+	                    </div>
+	                    <div class="col-md-2">
+	                        <a href="#"><i class="fa fa-instagram"></i></a>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</footer>
+</body>
+</html>

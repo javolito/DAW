@@ -1,0 +1,35 @@
+<h1>Listing subasta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id coche</th>
+      <th>Comprador</th>
+      <th>Fecha publicacion</th>
+      <th>Fecha limite</th>
+      <th>Compra ya</th>
+      <th>Puja actual</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subasta.each do |subastum| %>
+      <tr>
+        <td><%= subastum.id_coche %></td>
+        <td><%= subastum.comprador %></td>
+        <td><%= subastum.fecha_publicacion %></td>
+        <td><%= subastum.fecha_limite %></td>
+        <td><%= subastum.compra_ya %></td>
+        <td><%= subastum.puja_actual %></td>
+        <td><%= link_to 'Show', subastum %></td>
+        <td><%= link_to 'Edit', edit_subastum_path(subastum) %></td>
+        <td><%= link_to 'Destroy', subastum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subastum', new_subastum_path %>

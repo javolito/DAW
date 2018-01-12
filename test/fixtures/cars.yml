@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  propietario: 1
+  marca: MyString
+  modelo: MyString
+  año: 1
+  combustible: MyString
+  cambio: MyString
+  km: 1
+  descripcion: MyText
+
+two:
+  propietario: 1
+  marca: MyString
+  modelo: MyString
+  año: 1
+  combustible: MyString
+  cambio: MyString
+  km: 1
+  descripcion: MyText

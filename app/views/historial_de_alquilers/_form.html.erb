@@ -1,0 +1,37 @@
+<%= form_for(@historial_de_alquiler) do |f| %>
+  <% if @historial_de_alquiler.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@historial_de_alquiler.errors.count, "error") %> prohibited this historial_de_alquiler from being saved:</h2>
+
+      <ul>
+      <% @historial_de_alquiler.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_coche %><br>
+    <%= f.number_field :id_coche %>
+  </div>
+  <div class="field">
+    <%= f.label :alquilador %><br>
+    <%= f.number_field :alquilador %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_ini_alquiler %><br>
+    <%= f.datetime_select :fecha_ini_alquiler %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_fin_alquiler %><br>
+    <%= f.datetime_select :fecha_fin_alquiler %>
+  </div>
+  <div class="field">
+    <%= f.label :precio %><br>
+    <%= f.number_field :precio %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

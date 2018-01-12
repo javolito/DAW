@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id coche:</strong>
+  <%= @historial_de_alquiler.id_coche %>
+</p>
+
+<p>
+  <strong>Alquilador:</strong>
+  <%= @historial_de_alquiler.alquilador %>
+</p>
+
+<p>
+  <strong>Fecha ini alquiler:</strong>
+  <%= @historial_de_alquiler.fecha_ini_alquiler %>
+</p>
+
+<p>
+  <strong>Fecha fin alquiler:</strong>
+  <%= @historial_de_alquiler.fecha_fin_alquiler %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @historial_de_alquiler.precio %>
+</p>
+
+<%= link_to 'Edit', edit_historial_de_alquiler_path(@historial_de_alquiler) %> |
+<%= link_to 'Back', historial_de_alquilers_path %>

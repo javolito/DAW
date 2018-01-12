@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_coche: 1
+  comprador: 1
+  fecha_publicacion: 2018-01-11 13:00:28
+  fecha_limite: 2018-01-11 13:00:28
+  compra_ya: 1
+  puja_actual: 1
+
+two:
+  id_coche: 1
+  comprador: 1
+  fecha_publicacion: 2018-01-11 13:00:28
+  fecha_limite: 2018-01-11 13:00:28
+  compra_ya: 1
+  puja_actual: 1

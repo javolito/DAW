@@ -1,0 +1,33 @@
+<h1>Listing historial_de_alquilers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id coche</th>
+      <th>Alquilador</th>
+      <th>Fecha ini alquiler</th>
+      <th>Fecha fin alquiler</th>
+      <th>Precio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @historial_de_alquilers.each do |historial_de_alquiler| %>
+      <tr>
+        <td><%= historial_de_alquiler.id_coche %></td>
+        <td><%= historial_de_alquiler.alquilador %></td>
+        <td><%= historial_de_alquiler.fecha_ini_alquiler %></td>
+        <td><%= historial_de_alquiler.fecha_fin_alquiler %></td>
+        <td><%= historial_de_alquiler.precio %></td>
+        <td><%= link_to 'Show', historial_de_alquiler %></td>
+        <td><%= link_to 'Edit', edit_historial_de_alquiler_path(historial_de_alquiler) %></td>
+        <td><%= link_to 'Destroy', historial_de_alquiler, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Historial de alquiler', new_historial_de_alquiler_path %>

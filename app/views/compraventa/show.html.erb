@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id coche:</strong>
+  <%= @compraventum.id_coche %>
+</p>
+
+<p>
+  <strong>Comprador:</strong>
+  <%= @compraventum.comprador %>
+</p>
+
+<p>
+  <strong>Fecha publicacion:</strong>
+  <%= @compraventum.fecha_publicacion %>
+</p>
+
+<p>
+  <strong>Fecha compra:</strong>
+  <%= @compraventum.fecha_compra %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @compraventum.precio %>
+</p>
+
+<%= link_to 'Edit', edit_compraventum_path(@compraventum) %> |
+<%= link_to 'Back', compraventa_path %>

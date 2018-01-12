@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id coche:</strong>
+  <%= @subastum.id_coche %>
+</p>
+
+<p>
+  <strong>Comprador:</strong>
+  <%= @subastum.comprador %>
+</p>
+
+<p>
+  <strong>Fecha publicacion:</strong>
+  <%= @subastum.fecha_publicacion %>
+</p>
+
+<p>
+  <strong>Fecha limite:</strong>
+  <%= @subastum.fecha_limite %>
+</p>
+
+<p>
+  <strong>Compra ya:</strong>
+  <%= @subastum.compra_ya %>
+</p>
+
+<p>
+  <strong>Puja actual:</strong>
+  <%= @subastum.puja_actual %>
+</p>
+
+<%= link_to 'Edit', edit_subastum_path(@subastum) %> |
+<%= link_to 'Back', subasta_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@puja) do |f| %>
+  <% if @puja.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@puja.errors.count, "error") %> prohibited this puja from being saved:</h2>
+
+      <ul>
+      <% @puja.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_subasta %><br>
+    <%= f.number_field :id_subasta %>
+  </div>
+  <div class="field">
+    <%= f.label :pujador %><br>
+    <%= f.number_field :pujador %>
+  </div>
+  <div class="field">
+    <%= f.label :valor %><br>
+    <%= f.number_field :valor %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br>
+    <%= f.datetime_select :fecha %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
